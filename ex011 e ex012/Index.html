@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="P.png" type="image/x-icon">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens Dinâmicas</h1>
+    <p>Tente abrir este site em varios dispositivos diferentes ou simplemente aumente e diminua ao tamanho do seu navegador.</p>
+    <!-- <picture>
+        <source media="(max-width: 750px)" srcset="imagens/P.png" type="image/png">
+        <source media="(max-width: 1050px )" srcset="imagens/M.png" type="image/png">
+        <img src="imagens/G.png" alt="imagem flexível">
+    </picture> -->
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reprudzir áudios em HTML5</p>
+    <!-- <audio src="midia/Dance.mp3" controls autoplay></audio> -->
+    <audio preload="metadata" controls>
+        <source src="midia/Dance.mp3" type="audio/mpeg">
+        <source src="midia/Dance.mp3" type="audio/ogg">
+        <source src="midia/Dance.mp3" type="audio/wav">
+    </audio> 
+    <p>Infelismente seu navegador não consegue reproduzir esse audio. <a href="midia/Dance.mp3">Clique aqui para baixar o arquivo</a></p>
+
+    <h1>reproduzindo Vídeo hospedado localmente</h1>
+    <p>este video esta hospedado no meu próprio servidor</p>
+    <video controls poster="" width="560"> <!--poster anexa uma capa ao video e o controls mostra o botão play no video, audio. e o loop o video fica reiniciando-->
+        <source src="videos/meu-video.mp4" type="video/mp4">
+        <source src="videos/meu-video.webm" type="video/mp">
+        <source src="videos/meu-video.ogv" type="video/mp">
+        <p>Seu navegador não tem compatibilidade com reprodução de vidoes</p>
+    </video>
+<h1>Inserindo vidoes do Youtube</h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZDNfY-fWFe4?si=P_PqfIpp6xV90YcM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
+
+    
+</body>
+</html>
