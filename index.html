@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa no Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #searchBox {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #007BFF;
+            border-radius: 5px;
+            outline: none;
+        }
+        .content {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .item {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Pesquisa no Site</h2>
+    <input type="text" id="searchBox" placeholder="Digite para pesquisar..." onkeyup="searchContent()">
+
+    <div class="content">
+        <div class="item">HTML</div>
+        <div class="item">CSS</div>
+        <div class="item">JavaScript</div>
+        <div class="item">React</div>
+        <div class="item">Python</div>
+        <div class="item">Node.js</div>
+    </div>
+
+    <script>
+        function searchContent() {
+            let input = document.getElementById("searchBox").value.toLowerCase();
+            let items = document.querySelectorAll(".item");
+
+            items.forEach(item => {
+                let text = item.innerText.toLowerCase();
+                if (text.includes(input)) {
+                    item.classList.remove("hidden");
+                } else {
+                    item.classList.add("hidden");
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
