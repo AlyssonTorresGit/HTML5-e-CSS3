@@ -1,4 +1,4 @@
-@charset
+
 <?php
 // Configuração do banco de dados
 $host = "localhost"; // Servidor do banco
